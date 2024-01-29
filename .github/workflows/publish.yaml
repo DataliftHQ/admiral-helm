@@ -1,5 +1,6 @@
 ## Reference: https://github.com/helm/chart-releaser-action
 name: Chart Publish
+
 on:
   push:
     branches:
