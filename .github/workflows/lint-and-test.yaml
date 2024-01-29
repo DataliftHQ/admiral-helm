@@ -1,4 +1,5 @@
 name: Linting and Testing
+
 on: pull_request
 
 permissions:
@@ -6,36 +7,34 @@ permissions:
 
 jobs:
   linter-artifacthub:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     container:
-      image: public.ecr.aws/artifacthub/ah:v1.16.0
+      image: public.ecr.aws/artifacthub/ah:v1.17.0
       options: --user 1001
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4.1.1
+    - name: Checkout code
+      uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
     - name: Run ah lint
       working-directory: ./charts
       run: ah lint
 
   chart-test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4.1.1
+    - name: Checkout code
+      uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
       with:
         fetch-depth: 0
     - name: Setup Helm
-      uses: azure/setup-helm@v3
-      with:
-        version: v3.13.1
+      uses: azure/setup-helm@5119fcb9089d432beecbf79bb2c7915207344b78 # v3.5
     - name: Setup python
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@0a5c61591373683505ea898e09a3ea4f39ef2b9c # v5.0.0
       with:
         python-version: '3.10'
         check-latest: true
     - name: Setup chart linting
       id: lint
-      uses: helm/chart-testing-action@v2.6.1
+      uses: helm/chart-testing-action@e6669bcd63d7cb57cb4380c33043eebe5d111992 # v2.6.1
     - name: List changed charts
       id: list-changed
       run: |

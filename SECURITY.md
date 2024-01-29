@@ -1,6 +1,6 @@
 # Security Policy
 
-## Reporting a Vulnerability for Datalift Helm Charts
+## Reporting a Vulnerability for Admiral Helm Charts
 
 We have enabled the ability to privately report security issues through the  Security tab above.
 
