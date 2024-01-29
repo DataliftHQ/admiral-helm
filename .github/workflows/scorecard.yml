@@ -1,34 +1,24 @@
-# This workflow uses actions that are not certified by GitHub. They are provided
-# by a third-party and are governed by separate terms of service, privacy
-# policy, and support documentation.
-
 name: Scorecard supply-chain security
 on:
-  # For Branch-Protection check. Only the default branch is supported. See
-  # https://github.com/ossf/scorecard/blob/main/docs/checks.md#branch-protection
-  branch_protection_rule:
-  # To guarantee Maintained check is occasionally updated. See
-  # https://github.com/ossf/scorecard/blob/main/docs/checks.md#maintained
-  schedule:
+    branch_protection_rule:
+    schedule:
     - cron: '39 18 * * 6'
   push:
-    branches: [ "master" ]
+    branches:
+      - 'master'
+      - 'release-[0-9]+.[0-9]+'
 
-# Declare default permissions as read only.
 permissions: read-all
 
 jobs:
   analysis:
     name: Scorecard analysis
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     permissions:
-      # Needed to upload the results to code-scanning dashboard.
-      security-events: write
-      # Needed to publish results and get a badge (see publish_results below).
-      id-token: write
-      # Uncomment the permissions below if installing in a private repository.
-      # contents: read
-      # actions: read
+            security-events: write
+            id-token: write
+      contents: read
+      actions: read
 
     steps:
       - name: "Checkout code"

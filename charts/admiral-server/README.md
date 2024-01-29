@@ -1,7 +1,7 @@
-# Datalift Agent Helm Chart
+# Admiral Server Helm Chart
 
-This repository contains the official Datalift Agent Helm chart for installing
-and configuring Datalift on Kubernetes.
+This repository contains the official Admiral Agent Helm chart for installing
+and configuring Admiral on Kubernetes.
 
 ## Prerequisites
 
@@ -19,7 +19,7 @@ The versions required are:
 
 In addition to Helm, you must also have a:
 
-  * **Datalift API Token**
+  * **Admiral Token**
 
 ## Usage
 
@@ -27,20 +27,20 @@ In addition to Helm, you must also have a:
 
 Before installing the chart, you must create two Kubernetes secrets:
 
-To use the charts, you must add the Datalift Helm Chart repository.
+To use the charts, you must add the Admiral Helm Chart repository.
 
 ```shell
-helm repo add datalift https://charts.datalift.io
+helm repo add admiral https://charts.admiral.io
 helm repo update
-helm install datalift-agent datalift/datalift-agent \
-    -set config.token='AGENT_TOKEN'
+helm install admiral-server admiral/admiral-server \
+    -set config.token='ADMIRAL_TOKEN'
 ```
 
 ### Upgrade existing Helm Chart
 
 ```
 helm repo update
-helm upgrade datalift-agent datalift/datalift-agent --reuse-values
+helm upgrade admiral-server admiral/admiral-server --reuse-values
 ```
 
 ## Values
@@ -53,7 +53,7 @@ helm upgrade datalift-agent datalift/datalift-agent --reuse-values
 | config | object | `{}` |  |
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
-| image.repository | string | `"datalifthq/datalift-agent"` |  |
+| image.repository | string | `"ghcr.io/datalifthq/admiral-server"` |  |
 | image.tag | string | `""` |  |
 | imagePullSecrets | list | `[]` |  |
 | nameOverride | string | `""` |  |
