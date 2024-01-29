@@ -1,18 +1,18 @@
-# Datalift Helm Charts
+# Admiral Helm Charts
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Chart Publish](https://github.com/DataliftHQ/datalift-helm/actions/workflows/publish.yaml/badge.svg?branch=master)](https://github.com/DataliftHQ/datalift-helm/actions/workflows/publish.yaml)
-[![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/datalift)](https://artifacthub.io/packages/search?repo=datalift)
+[![Chart Publish](https://github.com/DataliftHQ/admiral-helm/actions/workflows/publish.yaml/badge.svg?branch=master)](https://github.com/DataliftHQ/datalift-helm/actions/workflows/publish.yaml)
+[![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/admiral)](https://artifacthub.io/packages/search?repo=admiral)
 
-Datalift Helm is a collection charts for [https://datalift.io](https://datalift.io) projects. The charts can be added using following command:
+Admiral Helm is a collection charts for [https://admiral.io](https://admiral.io) projects. The charts can be added using following command:
 
 ```bash
-helm repo add datalift https://charts.datalift.io
+helm repo add admiral https://charts.admiral.io
 ```
 
 ### Security Policy
 
-Please refer to [SECURITY.md](https://github.com/DataliftHQ/datalift-helm/blob/master/SECURITY.md) for details on how to report security issues.
+Please refer to [SECURITY.md](https://github.com/DataliftHQ/admiral-helm/blob/master/SECURITY.md) for details on how to report security issues.
 
 ### Changelog
 
