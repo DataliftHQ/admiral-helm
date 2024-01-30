@@ -32,7 +32,7 @@ To use the charts, you must add the Admiral Helm Chart repository.
 ```shell
 helm repo add admiral https://charts.admiral.io
 helm repo update
-helm install admiral-server admiral/admiral-server --set config.token='ADMIRAL_TOKEN'
+helm install admiral-server admiral/admiral-server
 ```
 
 ### Upgrade existing Helm Chart
@@ -49,7 +49,6 @@ helm upgrade admiral-server admiral/admiral-server --reuse-values
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | affinity | object | `{}` |  |
-| config | object | `{}` |  |
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.repository | string | `"ghcr.io/datalifthq/admiral-server"` |  |

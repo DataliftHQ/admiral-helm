@@ -60,14 +60,3 @@ Create the name of the service account to use
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}
 {{- end }}
-
-{{/*
-Secret Name
-*/}}
-{{- define "admiral-server.secretName" -}}
-{{- if .Values.config.secretName }}
-{{- .Values.config.secretName }}
-{{- else }}
-{{- printf "%s-token" (include "admiral-server.fullname" .) -}}
-{{- end }}
-{{- end }}
