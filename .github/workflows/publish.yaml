@@ -60,5 +60,5 @@ jobs:
           if [ -z "${pkg:-}" ]; then
             break
           fi
-          helm push "${pkg}" oci://ghcr.io/"${repo}"
+          helm push "${pkg}" oci://ghcr.io/"${repo}"-chart
         done

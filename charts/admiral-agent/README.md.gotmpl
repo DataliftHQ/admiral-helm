@@ -32,8 +32,7 @@ To use the charts, you must add the Admiral Helm Chart repository.
 ```shell
 helm repo add admiral https://charts.admiral.io
 helm repo update
-helm install admiral-agent admiral/admiral-agent \
-    -set config.token='ADMIRAL_TOKEN'
+helm install admiral-agent admiral/admiral-agent --set config.token='ADMIRAL_TOKEN'
 ```
 
 ### Upgrade existing Helm Chart
