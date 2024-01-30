@@ -10,10 +10,17 @@ Admiral Helm is a collection charts for [https://admiral.io](https://admiral.io)
 helm repo add admiral https://charts.admiral.io
 ```
 
-### Security Policy
+The charts published currently by this repository are the following:
+
+| Chart name | Status | Remark |
+|------------|--------|--------|
+| [admiral-agent](https://github.com/DataliftHQ/admiral-helm/tree/master/charts/admiral-agent)   | Alpha | Deploys the Admiral agent  |
+| [admiral-server](https://github.com/DataliftHQ/admiral-helm/tree/master/charts/admiral-server) | Alpha | Deploys the Admiral server |
+
+## Security Policy
 
 Please refer to [SECURITY.md](https://github.com/DataliftHQ/admiral-helm/blob/master/SECURITY.md) for details on how to report security issues.
 
-### Changelog
+## Changelog
 
 Releases are managed independently for each helm chart, and changelogs are tracked on each release.
