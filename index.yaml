@@ -54,6 +54,30 @@ entries:
       artifacthub.io/category: integration-delivery
     apiVersion: v2
     appVersion: 0.1.0
+    created: "2024-01-30T02:50:28.684129668Z"
+    description: Official Helm chart for Admiral Server
+    digest: 700d6bac3e81daf6ddaa4bdca9e7ff5ae9712bddc91f6353b6b3a7844fd7adb0
+    home: https://admiral.io
+    icon: https://raw.githubusercontent.com/datalifthq/admiral-helm/master/logo.png
+    keywords:
+    - admiral
+    - admiral-server
+    - idp
+    kubeVersion: '>= 1.20.0-0'
+    maintainers:
+    - name: datalift
+      url: https://github.com/datalifthq
+    name: admiral-server
+    sources:
+    - https://github.com/datalifthq/admiral-helm
+    type: application
+    urls:
+    - https://github.com/DataliftHQ/admiral-helm/releases/download/admiral-server-0.1.2/admiral-server-0.1.2.tgz
+    version: 0.1.2
+  - annotations:
+      artifacthub.io/category: integration-delivery
+    apiVersion: v2
+    appVersion: 0.1.0
     created: "2024-01-30T02:41:10.081096472Z"
     description: Official Helm chart for Admiral Server
     digest: afb0df00fdecddfbc026e3af5245d701cb64b737f5b60692feec32e33b929161
@@ -98,4 +122,4 @@ entries:
     urls:
     - https://github.com/DataliftHQ/admiral-helm/releases/download/admiral-server-0.1.0/admiral-server-0.1.0.tgz
     version: 0.1.0
-generated: "2024-01-30T02:41:10.081134501Z"
+generated: "2024-01-30T02:50:28.684148122Z"
